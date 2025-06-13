@@ -1,0 +1,51 @@
+:root {
+  --primary-color: #646cff;
+  --bg-color: rgba(36, 36, 36, 0.95);
+  --text-color: #ffffff;
+  --border-color: #3a3a3a;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background-color: #181824;
+}
+
+.app {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+
+  &__header {
+    height: 300px;
+    width: 100%;
+    background: url('../assets/DesktopImg.jpg') no-repeat center;
+    background-size: cover;
+    margin-bottom: -60px;
+  }
+
+  &__title {
+    text-align: center;
+    color: var(--text-color);
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
+    padding-top: 4rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__container {
+    background-color: var(--bg-color);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+  }
+} 

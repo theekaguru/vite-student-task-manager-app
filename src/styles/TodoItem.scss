@@ -1,0 +1,97 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  transition: all 0.2s ease;
+
+  &:hover {
+    .todo-item__delete {
+      opacity: 1;
+    }
+  }
+
+  &.completed {
+    .todo-item__text {
+      text-decoration: line-through;
+      color: #666;
+    }
+
+    .todo-item__checkbox .checkmark {
+      background: linear-gradient(135deg, #57ddff 0%, #c058f3 100%);
+      border: none;
+    }
+  }
+
+  &__checkbox {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    margin-right: 1rem;
+    cursor: pointer;
+
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 24px;
+      height: 24px;
+      border: 2px solid var(--border-color);
+      border-radius: 50%;
+      transition: all 0.2s ease;
+
+      &:hover {
+        border-color: #57ddff;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 8px;
+        top: 4px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    input:checked ~ .checkmark {
+      background: linear-gradient(135deg, #57ddff 0%, #c058f3 100%);
+      border: none;
+      &:after {
+        display: block;
+      }
+    }
+  }
+
+  &__text {
+    flex: 1;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: color 0.2s ease;
+  }
+
+  &__delete {
+    background: none;
+    border: none;
+    color: #666;
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 0 0.5rem;
+    opacity: 0;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: var(--text-color);
+    }
+  }
+} 

@@ -1,0 +1,10 @@
+.todo-list {
+  min-height: 200px;
+
+  &__empty {
+    text-align: center;
+    padding: 2rem;
+    color: #666;
+    font-style: italic;
+  }
+} 
