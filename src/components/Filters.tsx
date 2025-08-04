@@ -9,12 +9,12 @@ interface FiltersProps {
   onClearCompleted: () => void;
 }
 
-const Filters: React.FC<FiltersProps> = ({
+const Filters = ({
   currentFilter,
   onFilterChange,
   itemsLeft,
   onClearCompleted
-}) => {
+}: FiltersProps) => {
   return (
     <div className="filters">
       <span className="filters__count">{itemsLeft} items left</span>

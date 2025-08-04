@@ -8,7 +8,7 @@ interface TodoItemProps {
   onDelete: (id: number) => void;
 }
 
-const TodoItem: React.FC<TodoItemProps> = ({ todo, onToggle, onDelete }) => {
+const TodoItem = ({ todo, onToggle, onDelete }: TodoItemProps) => {
   return (
     <div className={`todo-item ${todo.completed ? 'completed' : ''}`}>
       <label className="todo-item__checkbox">

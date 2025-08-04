@@ -1,13 +1,16 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../styles/TodoInput.scss';
 
+// Define the props interface
 interface TodoInputProps {
   onAddTodo: (text: string) => void;
 }
 
-const TodoInput: React.FC<TodoInputProps> = ({ onAddTodo }) => {
+const TodoInput = ({ onAddTodo }: TodoInputProps) => {
+  // State for the input field
   const [inputText, setInputText] = useState('');
 
+  // Handle form submission
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (inputText.trim()) {
